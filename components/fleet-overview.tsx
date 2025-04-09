@@ -1049,13 +1049,13 @@ export function FleetOverview() {
                                 value="wo"
                                 className="data-[state=active]:bg-gray-700 data-[state=active]:text-white relative z-30 cursor-pointer hover:bg-gray-800 transition-colors"
                               >
-                                WO
+                                Work Order
                               </TabsTrigger>
                               <TabsTrigger
                                 value="create-event"
                                 className="data-[state=active]:bg-gray-700 data-[state=active]:text-white relative z-30 cursor-pointer hover:bg-gray-800 transition-colors"
                               >
-                                Create Event
+                                Remark
                               </TabsTrigger>
                               <TabsTrigger
                                 value="defects"
