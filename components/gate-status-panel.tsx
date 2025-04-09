@@ -169,4 +169,3 @@ export function GateStatusPanel({ selectedGateId, selectedGate }: GateStatusPane
     </div>
   )
 }
-

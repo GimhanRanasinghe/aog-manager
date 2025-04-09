@@ -741,4 +741,3 @@ export function ChatPortal({
     </div>
   )
 }
-

@@ -1,3 +1,4 @@
+"use client"
 import {
   BarChart as RechartsBarChart,
   LineChart as RechartsLineChart,
@@ -13,11 +14,11 @@ interface ChartProps {
   data: any[]
   xField: string
   yField: string
-  height: number
   colors: string[]
+  height?: number
 }
 
-export function BarChart({ data, xField, yField, height, colors }: ChartProps) {
+export function BarChart({ data, xField, yField, colors, height = 300 }: ChartProps) {
   return (
     <ResponsiveContainer width="100%" height={height}>
       <RechartsBarChart data={data}>
@@ -30,16 +31,15 @@ export function BarChart({ data, xField, yField, height, colors }: ChartProps) {
   )
 }
 
-export function LineChart({ data, xField, yField, height, colors }: ChartProps) {
+export function LineChart({ data, xField, yField, colors, height = 300 }: ChartProps) {
   return (
     <ResponsiveContainer width="100%" height={height}>
       <RechartsLineChart data={data}>
         <XAxis dataKey={xField} />
         <YAxis />
         <Tooltip />
-        <Line type="monotone" dataKey={yField} stroke={colors[0]} strokeWidth={2} />
+        <Line type="monotone" dataKey={yField} stroke={colors[0]} />
       </RechartsLineChart>
     </ResponsiveContainer>
   )
 }
-
